@@ -1,0 +1,9 @@
+# Ignore artifacts:
+build
+node_modules
+.cache
+public
+
+# Ignore these file types:
+*.html
+*.md
