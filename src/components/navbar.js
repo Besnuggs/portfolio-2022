@@ -2,21 +2,28 @@ import React, { Fragment } from 'react'
 import { Disclosure } from '@headlessui/react'
 import { MenuIcon, XIcon } from '@heroicons/react/outline'
 import { Link } from 'gatsby'
-
-const navigation = [
-  { name: 'Home', to: '/', current: true },
-  { name: 'About', to: '/about', current: false },
-  { name: 'Skills', to: '/skills', current: false },
-  { name: 'Projects', to: '/projects', current: false },
-  { name: 'Work', to: '/work', current: false },
-  { name: 'Contact', to: '/contact', current: false },
-]
+import { useLocation } from '@reach/router'
+import ShipWheelIcon from '../assets/imgs/ship-wheel.svg'
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
 }
 
 export default function Navbar() {
+  const currentPath = useLocation().pathname
+  const navigation = [
+    { name: 'About', to: '/about', current: currentPath === '/about' },
+    { name: 'Skills', to: '/skills', current: currentPath === '/skills' },
+    {
+      name: 'Home',
+      icon: <ShipWheelIcon />,
+      to: '/',
+      current: currentPath === '/',
+    },
+    { name: 'Projects', to: '/projects', current: currentPath === '/projects' },
+    { name: 'Work', to: '/work', current: currentPath === '/work' },
+  ]
+
   return (
     <Disclosure as="nav" className="bg-gray-800">
       {({ open }) => (
@@ -34,16 +41,10 @@ export default function Navbar() {
                   )}
                 </Disclosure.Button>
               </div>
-              <div className="flex-1 flex items-center justify-center sm:items-stretch sm:justify-start">
-                <div className="flex-shrink-0 flex items-center">
-                  <img
-                    className="hidden lg:block h-8 w-auto"
-                    src="https://img.icons8.com/ios/48/000000/ship-wheel.png"
-                    alt="Nav"
-                  />
-                </div>
+              <div className="flex-1 flex items-center justify-center">
+                <div className="flex-shrink-0 flex items-center"></div>
                 <div className="hidden sm:block sm:ml-6">
-                  <div className="flex space-x-4">
+                  <div className="flex space-x-4 h-10">
                     {navigation.map((item) => (
                       <Link
                         key={item.name}
@@ -52,11 +53,11 @@ export default function Navbar() {
                           item.current
                             ? 'bg-gray-900 text-white'
                             : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                          'px-3 py-2 rounded-md text-sm font-medium'
+                          'px-3 py-2 rounded-md text-sm font-medium text-center m-auto block'
                         )}
                         aria-current={item.current ? 'page' : undefined}
                       >
-                        {item.name}
+                        {item.icon ? item.icon : item.name}
                       </Link>
                     ))}
                   </div>
@@ -70,8 +71,7 @@ export default function Navbar() {
               {navigation.map((item) => (
                 <Link
                   key={item.name}
-                  to="a"
-                  href={item.to}
+                  to={item.to}
                   className={classNames(
                     item.current
                       ? 'bg-gray-900 text-white'
@@ -80,7 +80,7 @@ export default function Navbar() {
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >
-                  {item.name}
+                  {item.icon ? item.icon : item.name}
                 </Link>
               ))}
             </div>
