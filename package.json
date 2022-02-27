@@ -5,10 +5,11 @@
   "main": "index.js",
   "scripts": {
     "build": "gatsby build",
-    "develop": "gatsby develop -p 8000",
+    "develop": "gatsby develop -H 192.168.0.14 -p 8000",
     "info": "gatsby info",
     "clean": "gatsby clean",
     "serve": "gatsby serve",
+    "prettier": "npx prettier --write .",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -22,6 +23,8 @@
   },
   "homepage": "https://github.com/Besnuggs/portfolio-2022#readme",
   "dependencies": {
+    "@headlessui/react": "^1.5.0",
+    "@heroicons/react": "^1.0.5",
     "gatsby": "^4.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"

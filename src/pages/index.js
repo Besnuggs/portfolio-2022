@@ -1,12 +1,10 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import Navbar from '../components/navbar'
 
 const LandingPage = () => {
   return (
     <div>
-      <h2 className="text-3xl underline">
-        Hello from main. <Link to="/about">Head to about</Link>
-      </h2>
+      <Navbar />
     </div>
   )
 }
