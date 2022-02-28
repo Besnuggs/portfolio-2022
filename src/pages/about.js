@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const AboutPage = () => {
   return (
     <Layout>
-      <section>About Page.</section>
+      <section className="h-full">About Page.</section>
     </Layout>
   )
 }

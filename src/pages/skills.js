@@ -4,7 +4,7 @@ import Layout from '../components/layout'
 const SkillsPage = () => {
   return (
     <Layout>
-      <section>Skills Page.</section>
+      <section className="h-full">Skills Page.</section>
     </Layout>
   )
 }

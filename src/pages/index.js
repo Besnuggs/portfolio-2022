@@ -5,7 +5,11 @@ import ProfileCard from '../components/profileCard'
 const LandingPage = () => {
   return (
     <Layout>
-      <ProfileCard />
+      <section>
+        <div className="h-full flex align-content justify-center">
+          <ProfileCard />
+        </div>
+      </section>
     </Layout>
   )
 }

@@ -3,19 +3,19 @@ import { StaticImage } from 'gatsby-plugin-image'
 
 const ProfileCard = () => {
   return (
-    <section className=" bg-[#071e34] flex font-medium items-center justify-center">
+    <section className="flex font-medium items-center justify-center">
       <section className="mx-auto bg-[#20354b] rounded-2xl px-8 py-6 shadow-lg">
-        <div className="mt-6 w-fit mx-auto bg-white">
+        <div className="mt-6 w-fit mx-auto rounded-md bg-white">
           <StaticImage
-            className="rounded-full w-48"
+            className="w-48"
             src="../assets/imgs/Callforce-Profile.png"
             alt="profile"
           />
         </div>
         <div className="mt-8">
-          <h2 className="text-white font-bold text-2xl tracking-wide">
-            Brady Snuggs
-          </h2>
+          <p className="text-white font-bold text-2xl tracking-wide">
+            Full Stack Developer
+          </p>
         </div>
         <div className="mt-3 text-white text-sm">
           <p className="flex items-center justify-center md:justify-start">

@@ -2,7 +2,7 @@ import React from 'react'
 
 const Footer = () => {
   return (
-    <footer className="fixed bottom-0 w-full text-center lg:text-left bg-gray-100 text-gray-600">
+    <footer className="w-full text-center lg:text-left bg-gray-100 text-gray-600">
       <div className="flex justify-center items-center lg:justify-end p-6 border-b border-gray-300">
         <div className="flex justify-center">
           <a
@@ -65,7 +65,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="text-center p-6 bg-gray-200">
-        <span>Copyright © 2021</span>
+        <span>Copyright © {new Date().getFullYear()}</span>
       </div>
     </footer>
   )

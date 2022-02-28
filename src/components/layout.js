@@ -2,13 +2,29 @@ import React from 'react'
 import Navbar from './navbar'
 import Footer from './footer'
 
+const Wrapper = ({ children }) => {
+  return (
+    <div
+      className="h-full bg-[#071e34] flex flex-col justify-between"
+      style={{
+        margin: '0 auto',
+        paddingTop: 0,
+      }}
+    >
+      {children}
+    </div>
+  )
+}
+
 const Layout = ({ children }) => {
   return (
-    <div className="layout">
-      <Navbar />
-      <div className="content">{children}</div>
-      <Footer />
-    </div>
+    <>
+      <Wrapper>
+        <Navbar />
+        {children}
+        <Footer />
+      </Wrapper>
+    </>
   )
 }
 
