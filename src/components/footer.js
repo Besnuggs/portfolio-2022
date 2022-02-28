@@ -3,8 +3,9 @@ import React from 'react'
 const Footer = () => {
   return (
     <footer className="w-full text-center lg:text-left bg-gray-100 text-gray-600">
-      <div className="flex justify-center items-center lg:justify-end p-6 border-b border-gray-300">
-        <div className="flex justify-center">
+      <div className="text-center p-3 bg-gray-200">
+        <span>Copyright © {new Date().getFullYear()}</span>
+        <div className="mt-2 flex justify-center">
           <a
             href="mailto:bradyesnuggs@gmail.com"
             className="mr-6 text-gray-600"
@@ -27,6 +28,8 @@ const Footer = () => {
           </a>
           <a
             href="https://www.linkedin.com/in/bradysnuggs/"
+            target="_blank"
+            rel="noreferrer"
             className="mr-6 text-gray-600"
           >
             <svg
@@ -45,7 +48,12 @@ const Footer = () => {
               ></path>
             </svg>
           </a>
-          <a href="https://github.com/Besnuggs" className="text-gray-600">
+          <a
+            href="https://github.com/Besnuggs"
+            target="_blank"
+            rel="noreferrer"
+            className="text-gray-600"
+          >
             <svg
               aria-hidden="true"
               focusable="false"
@@ -63,9 +71,6 @@ const Footer = () => {
             </svg>
           </a>
         </div>
-      </div>
-      <div className="text-center p-6 bg-gray-200">
-        <span>Copyright © {new Date().getFullYear()}</span>
       </div>
     </footer>
   )
