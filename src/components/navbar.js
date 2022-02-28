@@ -66,7 +66,11 @@ export default function Navbar() {
             </div>
           </div>
 
-          <Disclosure.Panel className="sm:hidden">
+          <Disclosure.Panel
+            as="ul"
+            style={{ background: 'inherit' }}
+            className="sm:hidden absolute w-full z-10"
+          >
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navigation.map((item) => (
                 <Link
@@ -76,7 +80,7 @@ export default function Navbar() {
                     item.current
                       ? 'bg-gray-900 text-white'
                       : 'text-gray-300 hover:bg-gray-700 hover:text-white',
-                    'block px-3 py-2 rounded-md text-base font-medium'
+                    'block px-3 py-2 rounded-md text-base font-medium relative'
                   )}
                   aria-current={item.current ? 'page' : undefined}
                 >

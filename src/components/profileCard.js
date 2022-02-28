@@ -18,7 +18,7 @@ const ProfileCard = () => {
           </p>
         </div>
         <div className="mt-3 text-white text-sm">
-          <p className="flex items-center justify-center md:justify-start">
+          <p className="flex items-center justify-start">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -36,7 +36,7 @@ const ProfileCard = () => {
             </svg>
             Saratoga Springs, UT
           </p>
-          <p className="flex items-center justify-center md:justify-start">
+          <p className="flex items-center justify-start">
             <svg
               aria-hidden="true"
               focusable="false"
@@ -54,7 +54,7 @@ const ProfileCard = () => {
             </svg>
             bradyesnuggs@gmail.com
           </p>
-          <p className="flex items-center justify-center md:justify-start">
+          <p className="flex items-center justify-start">
             <svg
               aria-hidden="true"
               focusable="false"
