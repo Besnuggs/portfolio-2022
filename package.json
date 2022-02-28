@@ -32,7 +32,10 @@
   },
   "devDependencies": {
     "autoprefixer": "^10.4.2",
+    "gatsby-plugin-image": "^2.8.1",
     "gatsby-plugin-postcss": "^5.8.0",
+    "gatsby-plugin-sharp": "^4.8.1",
+    "gatsby-source-filesystem": "^4.8.1",
     "postcss": "^8.4.7",
     "prettier": "^2.5.1",
     "tailwindcss": "^3.0.23"
