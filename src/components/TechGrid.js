@@ -61,13 +61,10 @@ const skills = {
 
 const TechComponent = ({ name, icon }) => {
   return (
-    <div class="bg-gray-100 border-indigo-600 dark:bg-gray-800 bg-opacity-95 border-opacity-60 | p-4 border-solid rounded-3xl border-2 | flex justify-around cursor-pointer | hover:bg-indigo-400 dark:hover:bg-indigo-600 hover:border-transparent | transition-colors duration-500">
-      {icon}
-      <div class="flex flex-col justify-center">
-        <p class="text-gray-900 dark:text-gray-300 font-semibold">{name}</p>
-        <p class="text-black dark:text-gray-100 text-justify font-semibold">
-          $15 000,00
-        </p>
+    <div className="bg-gray-100 border-indigo-600 dark:bg-gray-800 bg-opacity-95 border-opacity-60 | p-2 border-solid rounded-3xl border-2 | cursor-pointer | hover:bg-indigo-400 dark:hover:bg-indigo-600 hover:border-transparent | transition-colors duration-500">
+      <div className="flex flex-col align-center justify-center w-full m-auto text-center">
+        {icon}
+        <p className="text-gray-900 dark:text-gray-300 font-semibold">{name}</p>
       </div>
     </div>
   )
@@ -75,10 +72,10 @@ const TechComponent = ({ name, icon }) => {
 
 const TechGrid = ({ skillsType }) => {
   return (
-    <div class="min-h-screen bg-gray-300 dark:bg-gray-900 py-6 flex flex-col justify-center sm:py-12">
-      <div class="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 px-4">
-        {skills[skillsType].map((tech) => (
-          <TechComponent name={tech.name} icon={tech.icon} />
+    <div className="bg-gray-300 dark:bg-gray-900 py-6 flex flex-col justify-center sm:py-12">
+      <div className="grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-4 px-4">
+        {skills[skillsType].map(({ name, icon }) => (
+          <TechComponent name={name} icon={icon} />
         ))}
       </div>
     </div>
